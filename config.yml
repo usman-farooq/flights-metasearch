@@ -1,0 +1,31 @@
+
+# Database settings.
+database:
+  driverClass: com.mysql.jdbc.Driver
+  user: root
+  password: root
+  url: jdbc:mysql://localhost:3306/flights
+
+redis:
+  # The redis server's address; required.
+  endpoint: localhost:6379
+  # Auth password for redis server connection.  (default: null)
+  password: null
+  # The minimum number of idle connections to maintain in the pool.  (default: 0)
+  minIdle: 0
+  # The maximum number of idle connections allowed in the pool.  (default: 0)
+  maxIdle: 0
+  # The maximum number of connections allowed in the pool.  (default: 1024)
+  maxTotal: 1024
+  # Enables SSL connection. (default: false)
+  ssl: false
+  # The configured timeout (in milliseconds) for redis connections in the connection pool.  (default: 2000)
+  timeout: 8000
+
+swagger:
+  resourcePackage: com.metasearch.resources
+
+logging:
+  level: INFO
+  loggers:
+    io.dropwizard: DEBUG
